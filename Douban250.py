@@ -22,6 +22,8 @@ def movie():
     sql = "select * from students"
     cur.execute(sql)
     all = cur.fetchall()
+    cur.close()
+    conn.close()
 
     return render_template("movie.html",data_list =all)
 
