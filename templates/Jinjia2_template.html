@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jinjia2学习</title>
+</head>
+<body>
+    今天的日期是: {{ time }} <br>
+    今天的与会嘉宾有:
+    {% for i in list %}
+        <li>{{ i }}</li>
+    {% endfor %}<br>
+    他们开的车分别是: <br>
+    {% for key,value in form.items() %}
+        <table border="1">
+            <tr>
+                <th>{{ key }}</th>
+                <td>{{ value }}</td>
+            </tr>
+        </table>
+    {% endfor %}
+</body>
+</html>
